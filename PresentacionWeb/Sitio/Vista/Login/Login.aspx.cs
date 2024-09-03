@@ -40,14 +40,14 @@ namespace PresentacionWeb.Sitio.Vista.Login
                     this.Session["roles"] = str1;
                     string str2 = _consumoAuth.ObtenerId(this.txtusuario.Text.ToUpper(), this.txtpassword.Text.ToUpper());
                     this.Session["id"] = str2;
-                    if (sesion.Value.ToString() != "0")
-                    {
-                        tiempo = int.Parse(sesion.Value.ToString());
-                    }
-                    else
-                    {
+                    //if (sesion.Value.ToString() != "0")
+                    //{
+                    //    tiempo = int.Parse(sesion.Value.ToString());
+                    //}
+                    //else
+                    //{
                         tiempo = 30;
-                    }
+                    //}
 
                     string text = this.txtusuario.Text;
                     DateTime now = DateTime.Now;

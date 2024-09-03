@@ -41,7 +41,7 @@
 
                                 </div>
                             </div>
-                            <div class="row mb-1">
+                            <%--<div class="row mb-1">
                                 <div class="col-5 pt-2 ps-1 pe-0">
                                     <asp:Label runat="server" ID="lblTiempo">Tiempo de Conexion:</asp:Label>
                                 </div>
@@ -58,7 +58,7 @@
                                     </dx:BootstrapComboBox>
 
                                 </div>
-                            </div>
+                            </div>--%>
                             <div class="row mt-3">
                                 <div class="offset-4 col-8">
                                     
