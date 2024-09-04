@@ -478,6 +478,7 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
                 grdCuotasPoliza.DataSource = lstCuotasSession;
                 grdCuotasPoliza.DataBind();
                 lblmensaje.Text = "La Prima total es diferente de la suma de las cuotas por favor verifique este dato";
+                pnlMensaje.Visible = true;
                 return;
             }
             else
@@ -500,7 +501,15 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
                 objPoliza.id_perclie = id_per.Value;//Convert.ToString(cmbAsegurado.SelectedItem.Value);
 
                 objPoliza.id_spvs = Convert.ToString(cmbCiaAseg.SelectedItem.Value);
-                objPoliza.id_gru = Convert.ToInt64(cmbGrupo.SelectedItem.Value);
+                if(cmbGrupo.SelectedItem.Value.ToString()== "")
+                {
+                    objPoliza.id_gru = null;
+                }
+                else
+                {
+                    objPoliza.id_gru = Convert.ToInt64(cmbGrupo.SelectedItem.Value.ToString());
+                }
+            
                 objPoliza.clase_poliza = Convert.ToBoolean(rbTipoPoliza.SelectedItem.Value);
                 objPoliza.estado = true;
                 objPoliza.fc_reg = DateTime.Now;

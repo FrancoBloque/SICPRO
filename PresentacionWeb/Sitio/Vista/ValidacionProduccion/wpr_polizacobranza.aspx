@@ -55,32 +55,33 @@
             myModal.show();
         }
     </script>
-        
+
     <div class="container">
         <div class="card p-3 ">
-            <h1 class="fs-8 text-info fw-bold"> <asp:Label runat="server" ID="titulo" Text=""></asp:Label> </h1>
-            <asp:HiddenField runat="server" ID="id_clamov" Value=""/>
-            <asp:HiddenField runat="server" ID="id_poliza" Value=""/>
-            <asp:HiddenField runat="server" ID="id_mov" Value=""/>
-             <asp:HiddenField runat="server" ID="id_mom" Value=""/>
+            <h1 class="fs-8 text-info fw-bold">
+                <asp:Label runat="server" ID="titulo" Text=""></asp:Label>
+            </h1>
+            <asp:HiddenField runat="server" ID="id_clamov" Value="" />
+            <asp:HiddenField runat="server" ID="id_poliza" Value="" />
+            <asp:HiddenField runat="server" ID="id_mov" Value="" />
+            <asp:HiddenField runat="server" ID="id_mom" Value="" />
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
-                    <div class="entry">
-                        <img src="../../../UI/img/poliza.gif" alt=""  class="img-fluid">
-                    </div>
+                <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+
+                    <img src="../../../UI/img/poliza.gif" alt="" class="img-fluid">
                 </div>
-                <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+                <div class="col-12 col-sm-12 col-md-10 col-lg-9 col-xl-10">
                     <div class="row">
                         <div class="col-md-12">
                             <span id="ctl00_cpmaster_fechas" style="font-weight: bold;">Fechas</span>
                         </div>
                     </div>
-
+                    <br />
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-12 col-md-3 col-lg-3 col-xl-2 p-xl-0  ">
                             <span id="lblfecemis">Fecha de Emisión:</span>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-12 col-md-3 col-lg-3 col-xl-3">
                             <dx:BootstrapDateEdit ID="fc_emision" ClientInstanceName="fc_emision" runat="server" CalendarProperties-CssClasses-Button="btn-sm">
                                 <CssClasses Button="btn-sm" Input="form-control-sm fs-10" Calendar="fs-10" />
                                 <ValidationSettings SetFocusOnError="True" CausesValidation="true" ErrorDisplayMode="ImageWithText" EnableCustomValidation="true" ValidationGroup="form_wgr_poliza">
@@ -96,12 +97,12 @@
                                                      }" />
                             </dx:BootstrapDateEdit>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 pe-lg-0 col-xl-3 pe-xl-0">
                             <span id="lblfc_recepcion">Fecha de Recepción:</span>
                         </div>
-                        <div class="col-md-3">
-                            <dx:BootstrapDateEdit ID="fc_recepcion" ClientInstanceName="fc_recepcion" runat="server"  CalendarProperties-CssClasses-Button="btn-sm">
-                                <CssClasses Button="btn-sm" Input="form-control-sm fs-10" Calendar="fs-10"  />
+                        <div class="col-md-3 col-lg-3 col-xl-3 ">
+                            <dx:BootstrapDateEdit ID="fc_recepcion" ClientInstanceName="fc_recepcion" runat="server" CalendarProperties-CssClasses-Button="btn-sm">
+                                <CssClasses Button="btn-sm" Input="form-control-sm fs-10" Calendar="fs-10" />
                                 <ValidationSettings SetFocusOnError="True" CausesValidation="true" ErrorDisplayMode="ImageWithText" EnableCustomValidation="true" ValidationGroup="form_wgr_poliza">
                                     <%--ErrorDisplayMode="ImageWithTooltip"--%>
                                     <RequiredField ErrorText="Campo requerido" IsRequired="true" />
@@ -118,12 +119,12 @@
                     </div>
                     <%--<br />--%>
                     <div class="row mt-1">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 col-xl-2 p-xl-0">
                             <span id="lblfc_inivig">Inicio Vigencia:</span>
                         </div>
-                        <div class="col-md-3">
-                            <dx:BootstrapDateEdit ID="fc_inivig" ClientInstanceName="fc_inivig" runat="server"  CalendarProperties-CssClasses-Button="btn-sm">
-                                <CssClasses Button="btn-sm" Input="form-control-sm fs-10" Calendar="fs-10"  />
+                        <div class="col-md-3 col-lg-3 col-xl-3">
+                            <dx:BootstrapDateEdit ID="fc_inivig" ClientInstanceName="fc_inivig" runat="server" CalendarProperties-CssClasses-Button="btn-sm">
+                                <CssClasses Button="btn-sm" Input="form-control-sm fs-10" Calendar="fs-10" />
                                 <ValidationSettings SetFocusOnError="True" CausesValidation="true" ErrorDisplayMode="ImageWithText" EnableCustomValidation="true" ValidationGroup="form_wgr_poliza">
                                     <%--ErrorDisplayMode="ImageWithTooltip"--%>
                                     <RequiredField ErrorText="Campo requerido" IsRequired="true" />
@@ -137,12 +138,12 @@
                                                       }" />
                             </dx:BootstrapDateEdit>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3  col-xl-3">
                             <span id="ctl00_cpmaster_lblfc_finvig">Fin Vigencia:</span>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-xl-3">
                             <dx:BootstrapDateEdit ID="fc_finvig" ClientInstanceName="fc_finvig" runat="server" CalendarProperties-CssClasses-Button="btn-sm">
-                                <CssClasses Button="btn-sm" Input="form-control-sm fs-10" Calendar="fs-10"  />
+                                <CssClasses Button="btn-sm" Input="form-control-sm fs-10" Calendar="fs-10" />
                                 <ValidationSettings SetFocusOnError="True" CausesValidation="true" ErrorDisplayMode="ImageWithText" EnableCustomValidation="true" ValidationGroup="form_wgr_poliza">
                                     <%--ErrorDisplayMode="ImageWithTooltip"--%>
                                     <RequiredField ErrorText="Campo requerido" IsRequired="true" />
@@ -159,10 +160,10 @@
                     </div>
                     <%--<br />--%>
                     <div class="row mt-1">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 col-xl-2 p-xl-0">
                             <span id="lblnumero">N° de Poliza:</span>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-lg-3 col-xl-3">
                             <dx:BootstrapTextBox ID="txtNroPoliza" runat="server" Width="100%">
                                 <CssClasses Input="form-control-sm fs-10" />
                                 <ValidationSettings SetFocusOnError="True" RequiredField-IsRequired="true" ValidationGroup="form_wgr_poliza">
@@ -170,10 +171,10 @@
                                 </ValidationSettings>
                             </dx:BootstrapTextBox>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 col-xl-3">
                             <span id="lblnumliquida">Nº Liquidación:</span>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-lg-3 col-xl-3">
                             <dx:BootstrapTextBox ID="txtNroLiquidacion" runat="server" Width="100%">
                                 <CssClasses Input="form-control-sm fs-10" />
                                 <ValidationSettings SetFocusOnError="True" RequiredField-IsRequired="true" ValidationGroup="form_wgr_poliza">
@@ -184,10 +185,10 @@
                     </div>
                     <%--<br />--%>
                     <div class="row mt-1">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 col-xl-2 p-xl-0">
                             <span id="ctl00_cpmaster_Label1">Asegurado :</span>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 col-lg-9 col-xl-9">
                             <div class="d-flex">
                                 <div class="flex-grow-1">
                                     <dx:BootstrapCallbackPanel ID="CallBPersona" ClientInstanceName="CallBPersona" runat="server" OnCallback="CallBPersona_Callback">
@@ -215,10 +216,10 @@
                     </div>
 
                     <div class="row mt-1">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 col-xl-2 p-xl-0">
                             <span id="lbldireccion">Dirección :</span>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 col-lg-9 col-xl-9">
                             <div class="d-flex">
                                 <div class="flex-grow-1">
                                     <dx:BootstrapCallbackPanel ID="CallBDireccion" ClientInstanceName="CallBDireccion" runat="server" OnCallback="CallBDireccion_Callback">
@@ -246,12 +247,12 @@
                     </div>
                     <%--<br />--%>
                     <div class="row mt-1">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 col-xl-2 p-xl-0">
                             <span id="ctl00_cpmaster_Label3">Grupo :</span>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 col-lg-9 col-xl-9">
                             <dx:BootstrapComboBox ID="cmbGrupo" runat="server" ValueType="System.String" Width="100%">
-                                <CssClasses Button="btn-sm" Input="form-control-sm fs-10" ListBox="fs-10"/>
+                                <CssClasses Button="btn-sm" Input="form-control-sm fs-10" ListBox="fs-10" />
                                 <ValidationSettings SetFocusOnError="True" ValidationGroup="form_wgr_poliza" ErrorDisplayMode="ImageWithText" CausesValidation="true">
                                     <RequiredField ErrorText="Dato requerido" IsRequired="true" />
                                 </ValidationSettings>
@@ -260,12 +261,12 @@
                     </div>
                     <%--<br />--%>
                     <div class="row mt-1">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 col-xl-2 p-xl-0">
                             <span id="ctl00_cpmaster_Label2">Cia Aseguradora :</span>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 col-lg-9 col-xl-9">
                             <dx:BootstrapComboBox ID="cmbCiaAseg" runat="server" ValueType="System.String" Width="100%" AutoPostBack="True" OnSelectedIndexChanged="id_spvs_SelectedIndexChanged">
-                                <CssClasses Button="btn-sm" Input="form-control-sm fs-10" ListBox="fs-10"/>
+                                <CssClasses Button="btn-sm" Input="form-control-sm fs-10" ListBox="fs-10" />
                                 <ValidationSettings SetFocusOnError="True" ValidationGroup="form_wgr_poliza" ErrorDisplayMode="ImageWithText" CausesValidation="false">
                                     <RequiredField ErrorText="Dato requerido" IsRequired="false" />
                                 </ValidationSettings>
@@ -274,10 +275,10 @@
                     </div>
                     <%--<br />--%>
                     <div class="row mt-1">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 col-xl-2 p-xl-0">
                             <span id="lblnombre">Producto :</span>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 col-lg-9 col-xl-9">
                             <dx:BootstrapComboBox ID="cmbProducto" runat="server" ValueType="System.String" Width="100%">
                                 <CssClasses Button="btn-sm" Input="form-control-sm fs-10" ListBox="fs-10" />
                                 <ValidationSettings SetFocusOnError="True" ValidationGroup="form_wgr_poliza" ErrorDisplayMode="ImageWithText" CausesValidation="true">
@@ -302,12 +303,12 @@
                     </div>--%>
                     <%--<br />--%>
                     <div class="row mt-1">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 col-xl-2 p-xl-0">
                             <span id="ctl00_cpmaster_lblejecutivo">Ejecutivo:</span>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 col-lg-9 col-xl-9">
                             <dx:BootstrapComboBox ID="cmbEjecutivo" runat="server" ValueType="System.String" Width="100%">
-                                <CssClasses Button="btn-sm" Input="form-control-sm fs-10" ListBox="fs-10"/>
+                                <CssClasses Button="btn-sm" Input="form-control-sm fs-10" ListBox="fs-10" />
                                 <ValidationSettings SetFocusOnError="True" ValidationGroup="form_wgr_poliza" ErrorDisplayMode="ImageWithText" CausesValidation="true">
                                     <RequiredField ErrorText="Dato requerido" IsRequired="true" />
                                 </ValidationSettings>
@@ -316,10 +317,10 @@
                     </div>
                     <%--<br />--%>
                     <div class="row mt-1">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 col-xl-2 p-xl-0">
                             <span id="ctl00_cpmaster_lblagente">Agente Cartera:</span>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 col-lg-9 col-xl-9">
                             <dx:BootstrapComboBox ID="cmbAgente" runat="server" ValueType="System.String" Width="100%">
                                 <CssClasses Button="btn-sm" Input="form-control-sm fs-10" ListBox="fs-10" />
                                 <ValidationSettings SetFocusOnError="True" ValidationGroup="form_wgr_poliza" ErrorDisplayMode="ImageWithText" CausesValidation="true">
@@ -330,94 +331,85 @@
                     </div>
                     <%--<br />--%>
                     <div class="row mt-1">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 col-xl-2 p-xl-0">
                             <span id="ctl00_cpmaster_Label4">Tipo Poliza:</span>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 col-lg-9 col-xl-9">
                             <dx:ASPxRadioButtonList ID="rbTipoPoliza" runat="server" RepeatDirection="Horizontal" Border-BorderStyle="None" ValueType="System.Boolean">
                                 <Items>
-                                    <dx:ListEditItem Text="Normal" Value="True" ></dx:ListEditItem>
+                                    <dx:ListEditItem Text="Normal" Value="True"></dx:ListEditItem>
                                     <dx:ListEditItem Text="Flotante" Value="False" Selected></dx:ListEditItem>
                                 </Items>
                             </dx:ASPxRadioButtonList>
                         </div>
                     </div>
-                   
+
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 col-xl-2 p-xl-0">
                             <span id="lblprima_bruta">Prima Total:</span>
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-2 col-lg-4 col-xl-2 ">
 
                             <%--<input name="ctl00$cpmaster$prima_bruta" type="text" value="0,00" maxlength="15" id="ctl00_cpmaster_prima_bruta" onkeypress="return(currencyFormat(this,event));" onfocus="DoFocus(this);" onblur="DoBlur(this);" style="color:#336699;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;height:18px;width:75px;">--%>
                             <dx:BootstrapSpinEdit ID="txtPrimaBruta" runat="server" Number="0" MinValue="0" MaxValue="10000000000" Increment="0.1" LargeIncrement="1" NumberType="Float">
-                                <SpinButtons ShowLargeIncrementButtons="true" />
+                                <SpinButtons ShowLargeIncrementButtons="false" />
                                 <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
                             </dx:BootstrapSpinEdit>
                         </div>
-                        <div class="col-md-1">
+                        <div class="col-md-2 col-lg-2 col-xl-1 p-xl-0">
                             <span id="ctl00_cpmaster_lblnum_cuota">Nº Cuotas:</span>
                         </div>
                         <%--<input name="ctl00$cpmaster$num_cuota" type="text" maxlength="2" id="ctl00_cpmaster_num_cuota" onkeydown="return dFilter (event.keyCode, this, '##');" onfocus="DoFocus(this);" onblur="DoBlur(this);" style="color:#336699;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;height:18px;width:25px;">--%>
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 col-xl-2 ps-xl-0 ">
                             <dx:BootstrapSpinEdit ID="txtNumCuotas" runat="server" Number="0" MinValue="0" MaxValue="40" Increment="1" NumberType="Float">
                                 <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
                             </dx:BootstrapSpinEdit>
 
                         </div>
-                        <div class="col-md-1">
+                        <div class="col-md-2 col-lg-3 col-xl-1 p-xl-0 mt-lg-1">
                             <span id="ctl00_cpmaster_lblid_div">Divisa:</span>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3 col-lg-4 col-xl-3 mt-lg-1">
                             <dx:BootstrapComboBox ID="cmbDivisa" runat="server" ValueType="System.String">
                                 <CssClasses Button="btn-sm" Input="form-control-sm fs-10" ListBox="fs-10" Control="fs-10" />
                             </dx:BootstrapComboBox>
 
                         </div>
                     </div>
-                    
-                    <div class="row">
-                        <div class="col-md-2">      
+
+                    <div class="row mt-1">
+                        <div class="col-md-2 col-lg-3 col-xl-2 p-xl-0">
                             <span>Prima Neta:</span>
                         </div>
-                        <div class="col-md-10">      
-                               <table style="width: 100%;">
-                                   <tr>
-                                       <td style="width: 160px; height: 18px">          
-                                           <dx:BootstrapSpinEdit ID="txtPrimaNeta" Width="160px" runat="server" Number="0" MinValue="0" MaxValue="10000000000" Increment="0.1" LargeIncrement="1" NumberType="Float">
-                                               <SpinButtons ShowLargeIncrementButtons="true" />
-                                                 <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
-                                           </dx:BootstrapSpinEdit>
-
-                                       </td>
-                                       <td style="width: 65px; height: 18px">
-                                           <span>Porcentaje:</span>
-                                       </td>
-                                       <td style="width: 70px; height: 18px">                                          
-                                           <dx:BootstrapSpinEdit ID="txtPorcentaje" Width="70px" runat="server" Number="0" MinValue="0" MaxValue="100" Increment="1" NumberType="Float">    
-                                             <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
-                                           </dx:BootstrapSpinEdit>
-  
-                                       </td>
-                                       <td style="width: 45px; height: 18px">
-                                            <span>Comision:</span>                            
-                                       </td>
-                                       <td style="width: 100px; height: 18px">
-                                          <dx:BootstrapSpinEdit ID="txtComision" Width="90px" runat="server" Number="0" MinValue="0" MaxValue="10000000000" Increment="1" NumberType="Float">    
-                                            <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
-                                              </dx:BootstrapSpinEdit>
-                                       </td>
-                                       <td style="width: 70px; height: 18px">
-                                           <asp:Button ID="btnCalcular" runat="server" Text="Calcular" OnClick="btnCalcular_Click" CssClass="msg_button_class text-white" />
-                                       </td>
-                                   </tr>
-          
-                               </table>
+                        <div class="col-md-3 col-lg-4 col-xl-2 ">
+                            <dx:BootstrapSpinEdit ID="txtPrimaNeta" runat="server" Number="0" MinValue="0" MaxValue="10000000000" Increment="0.1" LargeIncrement="1" NumberType="Float">
+                                <SpinButtons ShowLargeIncrementButtons="false" />
+                                <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
+                            </dx:BootstrapSpinEdit>
                         </div>
+                        <div class="col-md-3 col-lg-2 col-xl-1 p-xl-0">
+                            <span>Porcentaje:</span>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xl-2 ps-xl-0">
+                            <dx:BootstrapSpinEdit ID="txtPorcentaje" runat="server" Number="0" MinValue="0" MaxValue="100" Increment="1" NumberType="Float">
+                                <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
+                            </dx:BootstrapSpinEdit>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xl-1 p-xl-0 mt-lg-1">
+                            <span>Comision:</span>
+                        </div>
+                        <div class="col-md-3 col-lg-4 col-xl-3 d-flex mt-lg-1">
+                            <dx:BootstrapSpinEdit ID="txtComision" runat="server" Number="0" MinValue="0" MaxValue="10000000000" Increment="0.1" LargeIncrement="1" NumberType="Float">
+                                <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
+                            </dx:BootstrapSpinEdit>
+                            <asp:Button ID="btnCalcular" runat="server" Text="Calcular" OnClick="btnCalcular_Click" CssClass="msg_button_class text-white" />
+
+                        </div>
+
                     </div>
-                  
+
                     <div class="row mt-1">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 col-xl-2 p-xl-0">
                             <span id="lbltipo_cuota">Forma de Pago</span>
                         </div>
                         <div class="col-md-9">
@@ -431,7 +423,7 @@
                     </div>
                     <%--<br />--%>
                     <div class="row mt-1">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-lg-3 col-xl-2 p-xl-0">
                             <span id="lblmat_aseg">Mat. Asegurada:</span>
                         </div>
                         <div class="col-md-9">
@@ -441,123 +433,125 @@
                         </div>
                     </div>
                     <%--<br />--%>
+                </div>
 
-                    <div class="row mt-1" runat="server" id="divCuotasPoliza">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-8">
-                            <div class="panel-group">
-                                <div class="panel panel-default">
-                                    <div class="panel-body">Cuotas de la Poliza</div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-body">
+                <div class="row mt-1 align-content-center" runat="server" id="divCuotasPoliza">
 
-                                        <asp:GridView ID="grdCuotasPoliza" Width="100%" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnSelectedIndexChanged="grdCuotasPoliza_SelectedIndexChanged">
-                                            <Columns>
-                                                <asp:BoundField DataField="cuota" HeaderText="Cuota" >
+                    <div class="col-md-12 col-lg-9 offset-lg-2  col-xl-8 offset-xl-2">
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-body">Cuotas de la Poliza</div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+
+                                    <asp:GridView ID="grdCuotasPoliza" Width="100%" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnSelectedIndexChanged="grdCuotasPoliza_SelectedIndexChanged">
+                                        <Columns>
+                                            <asp:BoundField DataField="cuota" HeaderText="Cuota">
                                                 <ControlStyle Width="20px" />
-                                                </asp:BoundField>
-                                                <asp:TemplateField HeaderText="Fecha Pago">
-                                                    <EditItemTemplate>
-                                                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("fecha_pago") %>'></asp:TextBox>
-                                                    </EditItemTemplate>
-                                                    <ItemTemplate>
-                                                         <dx:BootstrapDateEdit ID="dtFechaPago" ClientInstanceName="dtFechaPago" runat="server" Width="150px" 
-                                                             Date='<%# Bind("fecha_pago") %>' DateOnError="Null">
-                                                             <ValidationSettings SetFocusOnError="True" ErrorDisplayMode="ImageWithText" EnableCustomValidation="true">  <%--ErrorDisplayMode="ImageWithTooltip"--%>
-                                                                     <RequiredField ErrorText="Campo requerido" IsRequired="true"  />  
-                                                               </ValidationSettings>  
-                                                             <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
-                                                         </dx:BootstrapDateEdit>
-                                                    </ItemTemplate>
-                                                    <ControlStyle Width="50px" />
-                                                </asp:TemplateField>
-                                                <asp:TemplateField HeaderText="Cuota Total">
-                                                    <EditItemTemplate>
-                                                        <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("cuota_total") %>'></asp:TextBox>
-                                                    </EditItemTemplate>
-                                                    <ItemTemplate>                                                
-                                                        <dx:BootstrapSpinEdit ID="txtCuotaTotal" Width="150px" runat="server" Number="0" MinValue="0" MaxValue="10000000000" 
-                                                            Increment="0.1" LargeIncrement="1" NumberType="Float" Text='<%# Bind("cuota_total") %>'>
-                                                            <SpinButtons ShowLargeIncrementButtons="true" />
-                                                             <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
-                                                        </dx:BootstrapSpinEdit>
-                                                    </ItemTemplate>
-                                                    <ControlStyle Width="50px" />
-                                                </asp:TemplateField>
-                                                <asp:TemplateField HeaderText="Cuota Neta">
-                                                      <EditItemTemplate>
-                                                          <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("cuota_neta") %>'></asp:TextBox>
-                                                      </EditItemTemplate>
-                                                      <ItemTemplate>                                                
-                                                          <dx:BootstrapSpinEdit ID="txtCuotaNeta" Width="150px" runat="server" Number="0" MinValue="0" MaxValue="10000000000" 
-                                                              Increment="0.1" LargeIncrement="1" NumberType="Float" Text='<%# Bind("cuota_neta") %>'>
-                                                              <SpinButtons ShowLargeIncrementButtons="true" />
-                                                               <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
-                                                          </dx:BootstrapSpinEdit>
-                                                      </ItemTemplate>
-                                                      <ControlStyle Width="50px" />
-                                                  </asp:TemplateField>
+                                            </asp:BoundField>
+                                            <asp:TemplateField HeaderText="Fecha Pago">
 
-                                                <asp:TemplateField HeaderText="Comision">
-                                                    <EditItemTemplate>
-                                                        <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("cuota_comis") %>'></asp:TextBox>
-                                                    </EditItemTemplate>
-                                                    <ItemTemplate>                                                
-                                                        <dx:BootstrapSpinEdit ID="txtComision" Width="150px" runat="server" Number="0" MinValue="0" MaxValue="10000000000" 
-                                                            Increment="0.1" LargeIncrement="1" NumberType="Float" Text='<%# Bind("cuota_comis") %>'>
-                                                            <SpinButtons ShowLargeIncrementButtons="true" />
-                                                             <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
-                                                        </dx:BootstrapSpinEdit>
-                                                    </ItemTemplate>
-                                                    <ControlStyle Width="50px" />
-                                                </asp:TemplateField>
-                                                <asp:CommandField ButtonType="Image" SelectImageUrl="~/UI/img/lc_checkbox.png" SelectText="-&gt;" ShowSelectButton="True" />
-                                            </Columns>
-                                            <FooterStyle BackColor="White" ForeColor="#000066" />
-                                            <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-                                            <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-                                            <RowStyle ForeColor="#000066" />
-                                            <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-                                            <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                                            <SortedAscendingHeaderStyle BackColor="#007DBB" />
-                                            <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                                            <SortedDescendingHeaderStyle BackColor="#00547E" />
-                                        </asp:GridView>
-                                    </div>
+                                                <EditItemTemplate>
+                                                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("fecha_pago") %>'></asp:TextBox>
+                                                </EditItemTemplate>
+                                                <ItemTemplate>
+                                                    <dx:BootstrapDateEdit ID="dtFechaPago" ClientInstanceName="dtFechaPago" runat="server" Width="100px"
+                                                        Date='<%# Bind("fecha_pago") %>' DateOnError="Null">
+                                                        <ValidationSettings SetFocusOnError="True" ErrorDisplayMode="ImageWithText" EnableCustomValidation="true">
+                                                            <%--ErrorDisplayMode="ImageWithTooltip"--%>
+                                                            <RequiredField ErrorText="Campo requerido" IsRequired="true" />
+                                                        </ValidationSettings>
+                                                        <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
+                                                    </dx:BootstrapDateEdit>
+                                                </ItemTemplate>
+                                                <ControlStyle Width="50px" />
+                                            </asp:TemplateField>
+                                            <asp:TemplateField HeaderText="Cuota Total">
+                                                <EditItemTemplate>
+                                                    <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("cuota_total") %>'></asp:TextBox>
+                                                </EditItemTemplate>
+                                                <ItemTemplate>
+                                                    <dx:BootstrapSpinEdit ID="txtCuotaTotal" runat="server" Number="0" MinValue="0" MaxValue="10000000000"
+                                                        Increment="0.1" LargeIncrement="1" NumberType="Float" Text='<%# Bind("cuota_total") %>'>
+                                                        <SpinButtons ShowLargeIncrementButtons="false" />
+                                                        <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
+                                                    </dx:BootstrapSpinEdit>
+                                                </ItemTemplate>
+                                                <ControlStyle Width="50px" />
+                                            </asp:TemplateField>
+                                            <asp:TemplateField HeaderText="Cuota Neta">
+                                                <EditItemTemplate>
+                                                    <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("cuota_neta") %>'></asp:TextBox>
+                                                </EditItemTemplate>
+                                                <ItemTemplate>
+                                                    <dx:BootstrapSpinEdit ID="txtCuotaNeta" runat="server" Number="0" MinValue="0" MaxValue="10000000000"
+                                                        Increment="0.1" LargeIncrement="1" NumberType="Float" Text='<%# Bind("cuota_neta") %>'>
+                                                        <SpinButtons ShowLargeIncrementButtons="false" />
+                                                        <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
+                                                    </dx:BootstrapSpinEdit>
+                                                </ItemTemplate>
+                                                <ControlStyle Width="50px" />
+                                            </asp:TemplateField>
+
+                                            <asp:TemplateField HeaderText="Comision">
+                                                <EditItemTemplate>
+                                                    <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("cuota_comis") %>'></asp:TextBox>
+                                                </EditItemTemplate>
+                                                <ItemTemplate>
+                                                    <dx:BootstrapSpinEdit ID="txtComision" runat="server" Number="0" MinValue="0" MaxValue="10000000000"
+                                                        Increment="0.1" LargeIncrement="1" NumberType="Float" Text='<%# Bind("cuota_comis") %>'>
+                                                        <SpinButtons ShowLargeIncrementButtons="false" />
+                                                        <CssClasses Button="btn-sm" Control="fs-10" Input="form-control-sm fs-10" />
+                                                    </dx:BootstrapSpinEdit>
+                                                </ItemTemplate>
+                                                <ControlStyle Width="50px" />
+                                            </asp:TemplateField>
+                                            <asp:CommandField ButtonType="Image" SelectImageUrl="~/UI/img/lc_checkbox.png" SelectText="-&gt;" ShowSelectButton="True" />
+                                        </Columns>
+                                        <FooterStyle BackColor="White" ForeColor="#000066" />
+                                        <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                                        <RowStyle ForeColor="#000066" />
+                                        <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                                        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                                        <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                                        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                                        <SortedDescendingHeaderStyle BackColor="#00547E" />
+                                    </asp:GridView>
                                 </div>
                             </div>
-
-
-
                         </div>
-                    </div>
 
-                    <div class="row mt-1">
-                        <div class="col-md-4">
-                        </div>
-                        <div class="col-md-7">
-                            <dx:ASPxButton ID="btnNuevo" runat="server" Text="Nuevo" CssClass="msg_button_class" OnClick="btnNuevo_Click"></dx:ASPxButton>
-                            <dx:ASPxButton ID="btnCuotas" runat="server" Text="Guardar" CssClass="msg_button_class" OnClick="btnCuotas_Click" ></dx:ASPxButton>                          
-                            
-                            <dx:ASPxButton ID="btnMemo" runat="server" Text="Memo" CssClass="msg_button_class" OnClick="btnMemo_Click" ></dx:ASPxButton>                          
-                            <dx:ASPxButton ID="btnSalir" runat="server" Text="Salir" CssClass="msg_button_class" OnClick="btnSalir_Click"></dx:ASPxButton>
-                         
-                      </div>
-                    </div>
 
+
+                    </div>
                 </div>
+
+                <div class="row mt-1">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-7">
+                        <dx:ASPxButton ID="btnNuevo" runat="server" Text="Nuevo" CssClass="msg_button_class" OnClick="btnNuevo_Click"></dx:ASPxButton>
+                        <dx:ASPxButton ID="btnCuotas" runat="server" Text="Guardar" CssClass="msg_button_class" OnClick="btnCuotas_Click"></dx:ASPxButton>
+
+                        <dx:ASPxButton ID="btnMemo" runat="server" Text="Memo" CssClass="msg_button_class" OnClick="btnMemo_Click"></dx:ASPxButton>
+                        <dx:ASPxButton ID="btnSalir" runat="server" Text="Salir" CssClass="msg_button_class" OnClick="btnSalir_Click"></dx:ASPxButton>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-danger" role="alert" runat="server" id="pnlMensaje">
+                <strong>
+                    <asp:Label ID="lblmensaje" runat="server" Text="Introduzca Valores" Font-Size="Medium"></asp:Label>
+                </strong>
+            </div>
+            <p class="links">
+            </p>
+
         </div>
 
-      <div class="alert alert-danger" role="alert" runat="server" id="pnlMensaje">
-            <strong><asp:Label ID="lblmensaje" runat="server" Text="Introduzca Valores" Font-Size="Medium"></asp:Label> </strong>
-      </div>
-        <p class="links">
-    
-        </p>
-
-    </div>
-    
     </div>
 
 
@@ -693,33 +687,33 @@
 
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Reporte</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-             <div class="container">
-               <div class="row">
-                   <div class="col-md-12">
-                       <iframe id="ifrReport" runat="server" src="HTMLPage1.htm" height="600" width="100%"></iframe>
-                   </div>
-               </div>
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Reporte</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <iframe id="ifrReport" runat="server" src="HTMLPage1.htm" height="600" width="100%"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar Reporte</button>
+                </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar Reporte</button>
-          </div>
         </div>
-      </div>
     </div>
 
     <dx:ASPxPopupControl ID="popUpConfirmacion" runat="server" Modal="true" HeaderText="Confirmacion" ShowFooter="true" PopupElementID="body" ClientInstanceName="popUpConfirmacion"
         CloseAction="OuterMouseClick" PopupAction="None" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" Width="500px">
-        <HeaderStyle BackgroundImage-ImageUrl="../../../UI/img/msg_title_1" ForeColor="White" >
+        <HeaderStyle BackgroundImage-ImageUrl="../../../UI/img/msg_title_1" ForeColor="White">
             <BackgroundImage ImageUrl="../../../UI/img/msg_title_1"></BackgroundImage>
-         </HeaderStyle>
+        </HeaderStyle>
         <FooterStyle HorizontalAlign="Right" />
         <ContentCollection>
             <dx:PopupControlContentControl>
@@ -737,7 +731,7 @@
             </dx:PopupControlContentControl>
         </ContentCollection>
         <FooterContentTemplate>
-            <button type="button" style="background-image: url(../../../UI/img/msg_title_1); background-color:navy; background-size: contain; color: white; border: solid; padding: 2px" onclick="popUpConfirmacion.Hide()">ACEPTAR</button>
+            <button type="button" style="background-image: url(../../../UI/img/msg_title_1); background-color: navy; background-size: contain; color: white; border: solid; padding: 2px" onclick="popUpConfirmacion.Hide()">ACEPTAR</button>
         </FooterContentTemplate>
     </dx:ASPxPopupControl>
 
