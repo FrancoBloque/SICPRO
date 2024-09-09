@@ -224,7 +224,7 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
             objPrAnulada.id_movimiento = objDataCompletaPoliza.objDataPoliza.id_movimiento;
             objPrAnulada.neta_anulada = Convert.ToDecimal(txtPrimaNeta.Text);
             objPrAnulada.comision_anulada = Convert.ToDecimal(comision_anulada.Value);
-            if (lblDcAnexoDevol.Text == "0")            {
+            if (lblDcAnexoDevol.Text == "0"){
                
                 _objConsumoRegistroProd.ModificarAnulacion(objPrAnulada);
             }

@@ -311,8 +311,8 @@ namespace PresentacionWeb.Sitio.Vista.ReportesSistema
             var ci = Convert.ToString(cmbCompaniaClientes.SelectedItem.Value);
 
             var ca = Convert.ToString(cmbCarteraClientes.SelectedItem.Value);
-            var np = txtNumPolizaClientes.Text;
-            var nl = txtNumLiquidacionClientes.Text;
+            var np = txtNumPolizaClientes.Text.ToUpper();
+            var nl = txtNumLiquidacionClientes.Text.ToUpper();
             var h = historicoCliente.SelectedItem == null? true : historicoCliente.SelectedItem.Value;
 
             ifrReport.Visible = true;
@@ -337,8 +337,8 @@ namespace PresentacionWeb.Sitio.Vista.ReportesSistema
             var isuc = Convert.ToString(cmbSucursalVcmto.SelectedItem.Value);
             var gr = Convert.ToString(cmbGrupoVcmto.SelectedItem.Value);
 
-            var e1 = txtVenc1Vcmto.Text;
-            var e2 = txtVenc2Vcmto.Text;
+            var e1 = txtVenc1Vcmto.Text.ToUpper();
+            var e2 = txtVenc2Vcmto.Text.ToUpper();
             var vv = Convert.ToString(cmbDiasVcmto.SelectedItem.Value);
             var fc = listadoVcmto.Date.ToShortDateString();
 

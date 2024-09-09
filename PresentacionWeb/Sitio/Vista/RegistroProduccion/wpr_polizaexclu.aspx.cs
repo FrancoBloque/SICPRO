@@ -147,7 +147,7 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
             objPolizaMovimiento.fc_recepcion = fc_recepcion.Date;
             objPolizaMovimiento.mat_aseg = txtMatAseg.Text;
             objPolizaMovimiento.fc_reg = DateTime.Now;
-            objPolizaMovimiento.no_liquida = txtNroLiquidacion.Text;
+            objPolizaMovimiento.no_liquida = txtNroLiquidacion.Text.ToUpper();
             //objPolizaMovimiento.tipo_cuota = Convert.ToBoolean(tipo_cuota.SelectedItem.Value);
             //objPolizaMovimiento.id_mom = objData.;
 

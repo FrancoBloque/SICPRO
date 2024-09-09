@@ -147,7 +147,7 @@ namespace PresentacionWeb.Sitio.Vista.ModuloCobranzas
                         fecha_cobro = fecha_cobro.Date,
                         monto_cobro = monto_cobro.Number,
                         monto_resto = monto_cobro.Number,
-                        recibo_por = recibo_por.Text,
+                        recibo_por = recibo_por.Text.ToUpper(),
                         id_div = Convert.ToInt64( id_div.Value.ToString()),
                         id_perclie = id_per.Value,
                         id_apli =Convert.ToInt64( id_apli.Value.ToString()),

@@ -151,9 +151,9 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
             objPolizaMovimiento.estado = "PRODUCCION";
             objPolizaMovimiento.id_dir = objData.objRenovar.id_dir;
             objPolizaMovimiento.fc_recepcion = fc_recepcion.Date;
-            objPolizaMovimiento.mat_aseg = txtMatAseg.Text;
+            objPolizaMovimiento.mat_aseg = txtMatAseg.Text.ToUpper();
             objPolizaMovimiento.fc_reg = DateTime.Now;
-            objPolizaMovimiento.no_liquida = txtNroLiquidacion.Text;
+            objPolizaMovimiento.no_liquida = txtNroLiquidacion.Text.ToUpper();
             objPolizaMovimiento.tipo_cuota = Convert.ToBoolean(tipo_cuota.SelectedItem.Value);
             //objPolizaMovimiento.id_mom = objData.;
 

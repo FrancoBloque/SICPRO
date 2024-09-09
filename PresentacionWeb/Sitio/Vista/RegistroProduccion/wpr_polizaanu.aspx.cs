@@ -172,9 +172,9 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
             objPolizaMovimiento.estado = "PRODUCCION";
             objPolizaMovimiento.id_dir = objData.objPoliza.id_dir;
             objPolizaMovimiento.fc_recepcion = fc_recepcion.Date;
-            objPolizaMovimiento.mat_aseg = txtObservaciones.Text;
+            objPolizaMovimiento.mat_aseg = txtObservaciones.Text.ToUpper();
             objPolizaMovimiento.fc_reg = DateTime.Now;
-            objPolizaMovimiento.no_liquida = txtNroLiquidacion.Text;
+            objPolizaMovimiento.no_liquida = txtNroLiquidacion.Text.ToUpper();
             objPolizaMovimiento.tipo_cuota = true;// Convert.ToBoolean(tipo_cuota.SelectedItem.Value);
             objPolizaMovimiento.id_mom = objData.objPoliza.id_mom; ;
 
@@ -184,7 +184,7 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
             objPolizaAnulada.monto_anulada = Convert.ToDecimal(txtPrimaTotalAnulada.Text) * -1;
             //objPolizaAnulada.neta_anulada
 
-            if (_objConsumoRegistroProd.ExistePol(lblNroPoliza.Text, txtNroLiquidacion.Text))
+            if (_objConsumoRegistroProd.ExistePol(lblNroPoliza.Text.ToUpper(), txtNroLiquidacion.Text.ToUpper()))
             {
                 lblmensaje.Text = "Verifique el número de Póliza y liquidación se encuentran registrados con anterioridad <br/> Haga uso de los reportes para poder verificar este dato</p>";
 

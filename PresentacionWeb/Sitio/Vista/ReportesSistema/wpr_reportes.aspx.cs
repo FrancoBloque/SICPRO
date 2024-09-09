@@ -409,7 +409,7 @@ namespace PresentacionWeb.Sitio.Vista.ReportesSistema
             lblMensaje.Text = string.Empty;
 
             var mesAniv = Convert.ToString(cmbAniv.SelectedItem.Value);
-            var nomcli = txtNomclie.Text;
+            var nomcli = txtNomclie.Text.ToUpper();
             var suc = cmbOficina.SelectedItem.Value;
 
             reportTabClientes.Visible = true;
@@ -476,10 +476,10 @@ namespace PresentacionWeb.Sitio.Vista.ReportesSistema
             }
 
             var ipc = Convert.ToString(id_per.Value); //this.id_per.Value.ToString()
-            var nup = Convert.ToString(txtNumPolizaProd.Text); //this.num_poliza.Text
-            var nl = Convert.ToString(txtNumLiquidacionProd.Text); //this.num_liquida.Text
-            var de1 = Convert.ToString(txtDelProd.Text); //this.del1.Text
-            var de2 = Convert.ToString(txtAlProd.Text); //this.del2.Text
+            var nup = Convert.ToString(txtNumPolizaProd.Text.ToUpper()); //this.num_poliza.Text
+            var nl = Convert.ToString(txtNumLiquidacionProd.Text.ToUpper()); //this.num_liquida.Text
+            var de1 = Convert.ToString(txtDelProd.Text.ToUpper()); //this.del1.Text
+            var de2 = Convert.ToString(txtAlProd.Text.ToUpper()); //this.del2.Text
 
             var ca = Convert.ToString(cmbCarteraProd.SelectedItem.Value); //this.id_percart.SelectedValue
             var ej = Convert.ToString(cmbEjecutivoProd.SelectedItem.Value); //this.id_perejec.SelectedValue
@@ -491,7 +491,7 @@ namespace PresentacionWeb.Sitio.Vista.ReportesSistema
             var mv = Convert.ToString(cmbMovimientoProd.SelectedItem.Value); //this.id_clamov.SelectedValue
             var fc = Convert.ToString(cmbRangosFechasProd.SelectedItem.Value); //this.ddl_fecha.SelectedValue
 
-            var iv1 = string.IsNullOrEmpty(fechaDelProd.Text)? string.Empty : fechaDelProd.Date.ToShortDateString(); //this.inivig1.Text
+            var iv1 = string.IsNullOrEmpty(fechaDelProd.Text) ? string.Empty : fechaDelProd.Date.ToShortDateString(); //this.inivig1.Text
             var iv2 = string.IsNullOrEmpty(fechaAlProd.Text) ? string.Empty : fechaAlProd.Date.ToShortDateString(); //this.inivig2.Text
 
             var ve0 = Convert.ToString(cmbPrimaTotal.SelectedItem.Value); //this.ve0.SelectedValue
@@ -535,8 +535,8 @@ namespace PresentacionWeb.Sitio.Vista.ReportesSistema
             divMensajeError.Visible = false;
             lblMensaje.Text = string.Empty;
             
-            var numPoliza = txtNumPolizaMemo.Text;
-            var numLiquidacion = txtNumLiquidacionMemo.Text;
+            var numPoliza = txtNumPolizaMemo.Text.ToUpper();
+            var numLiquidacion = txtNumLiquidacionMemo.Text.ToUpper();
             var cartera = Convert.ToString(cmbCarteraMemo.SelectedItem.Value);
             var fechaMemo = Convert.ToString(cmbFechasMemo.SelectedItem.Value);
             var fechaDe = fechaDel.Date.ToShortDateString();

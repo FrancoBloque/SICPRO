@@ -133,9 +133,9 @@ namespace PresentacionWeb.Sitio.Vista.ModuloCobranzas
                 id_movimiento = Convert.ToInt64(no_liquida.Value),
                 id_devolucion = Convert.ToInt64(cuota_devolucion),
 
-                cheque = cheque.Text,
-                devolucion_por = pago_por.Text,
-                banco = banco.Text
+                cheque = cheque.Text.ToUpper(),
+                devolucion_por = pago_por.Text.ToUpper(),
+                banco = banco.Text.ToUpper()
             };
             if (conCobranza.ActualizarDev(prDev, mcheque))
             {

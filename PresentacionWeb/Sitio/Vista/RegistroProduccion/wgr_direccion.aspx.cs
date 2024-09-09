@@ -135,15 +135,15 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
                     {
                         id_dir = itemIdDir,
                         id_per = itemIdPer,
-                        direccion = direccion.Text,
+                        direccion = direccion.Text.ToUpper(),
                         id_tpdir = Convert.ToDouble(cmb_tpdir.SelectedItem.Value),
-                        telf_dir = telf_dir.Text,
-                        int_dire = int_dire.Text,
-                        telf_cel = telf_cel.Text,
-                        telf_fax = telf_fax.Text,
+                        telf_dir = telf_dir.Text.ToUpper(),
+                        int_dire = int_dire.Text.ToUpper(),
+                        telf_cel = telf_cel.Text.ToUpper(),
+                        telf_fax = telf_fax.Text.ToUpper(),
                         email = email.Text,
-                        casilla = casilla.Text,
-                        web = web.Text,
+                        casilla = casilla.Text.ToUpper(),
+                        web = web.Text.ToUpper(),
                         id_emis =Convert.ToDecimal(cmb_id_emis.SelectedItem.Value)                                               
                     };
 
@@ -171,15 +171,15 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
                     gr_direccion grDireccion = new gr_direccion()
                     {
                         id_per = itemIdPer,
-                        direccion = direccion.Text,
+                        direccion = direccion.Text.ToUpper(),
                         id_tpdir = Convert.ToDouble(cmb_tpdir.SelectedItem.Value),
-                        telf_dir = telf_dir.Text,
-                        int_dire = int_dire.Text,
-                        telf_cel = telf_cel.Text,
-                        telf_fax = telf_fax.Text,
+                        telf_dir = telf_dir.Text.ToUpper(),
+                        int_dire = int_dire.Text.ToUpper(),
+                        telf_cel = telf_cel.Text.ToUpper(),
+                        telf_fax = telf_fax.Text.ToUpper(),
                         email = email.Text,
-                        casilla = casilla.Text,
-                        web = web.Text,
+                        casilla = casilla.Text.ToUpper(),
+                        web = web.Text.ToUpper(),
                         id_emis = Convert.ToDecimal(cmb_id_emis.SelectedItem.Value)
                     };
                         var objResponse = _objConsumoRegistroProd.InsertarDireccion(grDireccion);

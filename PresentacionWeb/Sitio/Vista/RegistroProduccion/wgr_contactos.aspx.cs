@@ -154,8 +154,8 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
                 var objContacto = new gr_contacto();
                 objContacto.id_per = idPersona;
                 objContacto.id_dir = idDireccion;
-                objContacto.relacion = relacion.Text;
-                objContacto.activo = true;
+                objContacto.relacion = relacion.Text.ToUpper();
+            objContacto.activo = true;
             if (edit == "EDITAR")
             {
                 var responseUpdate = _objConsumoRegistroProd.ModificarContacto(objContacto);

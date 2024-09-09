@@ -201,9 +201,9 @@ namespace PresentacionWeb.Sitio.Vista.ModuloReclamos
                     reCaso.aprox_caso = decimal.Parse(this.aprox_caso.Text);
                     reCaso.id_divaprox = double.Parse(this.id_div.SelectedValue);
                     //reCaso.id_rolate = this.id_rolate;
-                    reCaso.inspector_cia = this.per_cia.Text;
-                    reCaso.atendido_en = this.direccion.Text;
-                    reCaso.atendido_por = this.per_aten.Text;
+                    reCaso.inspector_cia = this.per_cia.Text.ToUpper();
+                    reCaso.atendido_en = this.direccion.Text.ToUpper();
+                    reCaso.atendido_por = this.per_aten.Text.ToUpper();
                     //reCaso.lblmensaje = this.lblmensaje;
 
                     logicaReclamos.add_recaso(reCaso);
@@ -253,11 +253,11 @@ namespace PresentacionWeb.Sitio.Vista.ModuloReclamos
                     siniestro.anio = reCaso.anio_caso;
                     siniestro.id_sucur = reCaso.id_sucur;
                     siniestro.fc_incidente = (DateTime)this.fc_incidente.Value;
-                    siniestro.denunciante = this.denunciante.Text;
-                    siniestro.reladenun = this.reladenun.Text;
-                    siniestro.mat_aseg = this.mat_aseg.Text;
-                    siniestro.lugar_siniestro = this.lugar_siniestro.Text;
-                    siniestro.circunstancia = this.circunstancia.Text;
+                    siniestro.denunciante = this.denunciante.Text.ToUpper();
+                    siniestro.reladenun = this.reladenun.Text.ToUpper();
+                    siniestro.mat_aseg = this.mat_aseg.Text.ToUpper();
+                    siniestro.lugar_siniestro = this.lugar_siniestro.Text.ToUpper();
+                    siniestro.circunstancia = this.circunstancia.Text.ToUpper();
                     siniestro.id_uniobj = double.Parse(this.id_uniobj.Text);
                     siniestro.uniobj = this.uniobj.Text;
                     siniestro.fc_denuncia = (DateTime)this.fc_incidente.Value;

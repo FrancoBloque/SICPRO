@@ -496,7 +496,7 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
                 var objPoliza = new pr_poliza();
                 objPoliza.id_poliza = Convert.ToInt64(id_poliza.Value);
 
-                objPoliza.num_poliza = txtNroPoliza.Text;
+                objPoliza.num_poliza = txtNroPoliza.Text.ToUpper();
                 objPoliza.id_producto = Convert.ToInt64(cmbProducto.SelectedItem.Value);
                 objPoliza.id_perclie = id_per.Value;//Convert.ToString(cmbAsegurado.SelectedItem.Value);
 
@@ -537,9 +537,9 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
                 prPolmov.estado = "COBRANZAS"; //this.estado,
                 prPolmov.id_dir = Convert.ToInt64(id_direccion.Value);// Convert.ToInt64(cmbDireccion.SelectedItem.Value);
                 prPolmov.fc_recepcion = fc_recepcion.Date;
-                prPolmov.mat_aseg = txtMatAseg.Text;
+                prPolmov.mat_aseg = txtMatAseg.Text.ToUpper();
                 prPolmov.fc_reg = DateTime.Now;
-                prPolmov.no_liquida = txtNroLiquidacion.Text;
+                prPolmov.no_liquida = txtNroLiquidacion.Text.ToUpper();
                 prPolmov.num_cuota = Convert.ToDouble(txtNumCuotas.Text);
 
                 prPolmov.id_mom = Convert.ToInt64(id_mom.Value);

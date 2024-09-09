@@ -140,8 +140,8 @@ namespace PresentacionWeb.Sitio.Vista.ConfiguracionSistema
                     item.comis_riesgo = decimal.Parse(this.comis_riesgo.Text);
                     item.por_cred = decimal.Parse(this.por_cred.Text);
                     item.plus_neta = decimal.Parse( this.plus_neta.Text);
-                    item.form_riesgo1 = this.form_riesgo1.Text;
-                    item.form_riesgo2 = this.form_riesgo2.Text;
+                    item.form_riesgo1 = this.form_riesgo1.Text.ToUpper();
+                    item.form_riesgo2 = this.form_riesgo2.Text.ToUpper();
                     item.id_producto = long.Parse(this.id_producto.SelectedValue);
                     item.id_spvs = this.id_spvs.SelectedValue;
 

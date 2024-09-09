@@ -57,12 +57,12 @@ namespace PresentacionWeb.Sitio.Vista.ModuloComisiones
                 pr_pagocompania prAmortizacione = new pr_pagocompania()
                 {
 
-                    cheque = cheque.Text,
+                    cheque = cheque.Text.ToUpper(),
                     id_spvs = id_spvs.Value.ToString(),
                     fecha = (DateTime)fecha.Value,
                     monto_pc = Convert.ToDecimal(monto_pc.Value),
                     comision_pc = Convert.ToDecimal(comision_pc.Value),
-                    factura_pc = factura_pc.Text,
+                    factura_pc = factura_pc.Text.ToUpper(),
                     pc_mes = Convert.ToDecimal(this.pc_mes.Value),
                     pc_anio = Convert.ToDecimal(this.pc_anio.Text),
                     id_div = Convert.ToInt64(id_div.Value),

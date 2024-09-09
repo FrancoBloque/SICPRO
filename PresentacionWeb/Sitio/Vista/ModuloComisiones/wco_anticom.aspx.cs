@@ -34,8 +34,8 @@ namespace PresentacionWeb.Sitio.Vista.ModuloComisiones
                 id_percart = id_percart.Value.ToString(),
                 imp_anticipo =Convert.ToDecimal( imp_anticipo.Text),
                 fc_solicitud =(DateTime) fc_solicitud.Value,
-                desc_anti = desc_anti.Text,
-                doc_cont = doc_cont.Text
+                desc_anti = desc_anti.Text.ToUpper(),
+                doc_cont = doc_cont.Text.ToUpper()
             };
             if (consumoMod.InsAnticomi(coAnticom))
             {

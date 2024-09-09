@@ -51,7 +51,7 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
         private void Datos()
         {
             msgboxpanel.Visible = false;
-            if (!vigencia.Checked & (num_poliza.Text == "") & (nomraz.Text == "") & (nomco.Text == "") & (desc_producto.Text == "") & !porvencer.Checked)
+            if (!vigencia.Checked & (num_poliza.Text.ToUpper() == "") & (nomraz.Text.ToUpper() == "") & (nomco.Text.ToUpper() == "") & (desc_producto.Text.ToUpper() == "") & !porvencer.Checked)
             {
                 //msgboxpanel.Visible = true;
                 //MessageBox messageBox = new MessageBox(base.Server.MapPath("../msgbox1.tpl"));
@@ -84,7 +84,7 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
             //var dataTable = _objConsumoValidarProd.ObtenerTablaPolizaNRI(item, num_poliza.Text, id_per.Value, id_spvs.Value, id_producto.Value, vigencia.Checked, fc_inivig.Date, fc_finvig.Date, fc_polizavencida.Date, porvencer.Checked);
             
             var objTablaPolizaIn = new OC_ObtenerTablaPolizaIn();
-            objTablaPolizaIn.num_poliza = num_poliza.Text;
+            objTablaPolizaIn.num_poliza = num_poliza.Text.ToUpper();
             objTablaPolizaIn.id_perclie = id_per.Value;
             objTablaPolizaIn.id_spvs = id_spvs.Value;
             objTablaPolizaIn.id_producto = Convert.ToInt64(id_producto.Value);

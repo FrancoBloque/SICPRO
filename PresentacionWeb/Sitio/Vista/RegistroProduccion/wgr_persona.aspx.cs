@@ -200,8 +200,8 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
                 {
                     gr_persona grPersona = new gr_persona()
                     {
-                        id_per = id_per.Text,
-                        nomraz = nomraz.Text,
+                        id_per = id_per.Text.ToUpper(),
+                        nomraz = nomraz.Text.ToUpper(),
                         id_tper =  Convert.ToInt64(cmb_tper.SelectedItem.Value),
                         fechaaniv = fechaNacimiento.Date,
                         id_sal = Convert.ToInt64(cmb_id_sal.SelectedItem.Value),
@@ -209,7 +209,7 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
                         id_tdoc = Convert.ToInt64(cmb_tipodoc.SelectedItem.Value),
                         id_emis = Convert.ToInt64(cmb_id_emis.SelectedItem.Value),
                         id_suc = Convert.ToInt32(cmb_id_suc.SelectedItem.Value),
-                        nit_fac = nit_fac.Text,
+                        nit_fac = nit_fac.Text.ToUpper(),
                         //lblmensaje = this.lblmensaje
                     };
 
@@ -257,8 +257,8 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
                 {
                     gr_persona grPersona = new gr_persona()
                     {
-                        id_per = id_per.Text,
-                        nomraz = nomraz.Text,
+                        id_per = id_per.Text.ToUpper(),
+                        nomraz = nomraz.Text.ToUpper(),
                         id_tper = Convert.ToInt64(cmb_tper.SelectedItem.Value),
                         fechaaniv = fechaNacimiento.Date,
                         id_sal = Convert.ToInt64(cmb_id_sal.SelectedItem.Value),
@@ -266,7 +266,7 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
                         id_tdoc = Convert.ToInt64(cmb_tipodoc.SelectedItem.Value),
                         id_emis = Convert.ToInt64(cmb_id_emis.SelectedItem.Value),
                         id_suc = Convert.ToInt32(cmb_id_suc.SelectedItem.Value),
-                        nit_fac = nit_fac.Text,
+                        nit_fac = nit_fac.Text.ToUpper(),
                         //lblmensaje = this.lblmensaje
                     };
 

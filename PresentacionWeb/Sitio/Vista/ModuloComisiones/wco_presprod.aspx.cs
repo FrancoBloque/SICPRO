@@ -61,7 +61,7 @@ namespace PresentacionWeb.Sitio.Vista.ModuloComisiones
         
             co_presprod coPresprod = new co_presprod()
             {
-                anio_proy = anio_proy.Text,
+                anio_proy = anio_proy.Text.ToUpper(),
                 id_percart = id_percart.Value.ToString(),
                 monto_proy = Convert.ToDecimal(monto_proy.Text),
                 monto_cproy = Convert.ToDecimal(monto_cproy.Text),
@@ -86,7 +86,7 @@ namespace PresentacionWeb.Sitio.Vista.ModuloComisiones
         {
             co_presprod coPresprod = new co_presprod()
             {
-                anio_proy = anio_proy.Text,
+                anio_proy = anio_proy.Text.ToUpper(),
                 id_percart = id_percart.Value.ToString(),
                 monto_proy = Convert.ToDecimal( monto_proy.Text),
                 monto_cproy = Convert.ToDecimal(monto_cproy.Text),

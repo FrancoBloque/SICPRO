@@ -113,7 +113,7 @@ namespace PresentacionWeb.Sitio.Vista.ConfiguracionSistema
                 else
                 {
                     decimal idRol = decimal.Parse(id_rol.SelectedValue);
-                    logicaConfiguracion.AgregarUsuario(login.Text, idRol, id_per.Value);
+                    logicaConfiguracion.AgregarUsuario(login.Text.ToUpper(), idRol, id_per.Value);
                     lblMensaje.Text = "Usuario Agregado Satisfactoriamente";
                     popUpConfirmacion.ShowOnPageLoad = true;
                 }
@@ -129,7 +129,7 @@ namespace PresentacionWeb.Sitio.Vista.ConfiguracionSistema
             try
             {
                 decimal idRol = decimal.Parse(id_rol.SelectedValue);
-                logicaConfiguracion.ModificarUsuario1(login.Text, idRol, id_per.Value);
+                logicaConfiguracion.ModificarUsuario1(login.Text.ToUpper(), idRol, id_per.Value);
                 lblMensaje.Text = "Usuario Modificado Satisfactoriamente";
                 popUpConfirmacion.ShowOnPageLoad = true;
             }

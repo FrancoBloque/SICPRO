@@ -288,8 +288,8 @@ namespace PresentacionWeb.Sitio.Vista.ConfiguracionSistema
                     return;
                 }
                 logicaConfiguracion.InsertarFormRiesgo( 
-                                                        this.desc_producto.Text.Trim()
-                                                        , this.abrev_prod.Text.Trim()
+                                                        this.desc_producto.Text.Trim().ToUpper()
+                                                        , this.abrev_prod.Text.Trim().ToUpper()
                                                         , this.id_riesgo.SelectedValue
                                                         , this.id_spvs.SelectedValue
                                                         , bool.Parse(this.operador.SelectedItem.Text)

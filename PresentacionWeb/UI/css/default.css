@@ -550,3 +550,6 @@ th, td {
 	padding-right: 30px !important;*/
 }
 /**************/
+.dxbs-textbox .form-control {
+	text-transform: uppercase !important;
+}

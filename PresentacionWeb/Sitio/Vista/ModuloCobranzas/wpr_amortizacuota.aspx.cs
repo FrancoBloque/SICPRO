@@ -200,7 +200,7 @@ namespace PresentacionWeb.Sitio.Vista.ModuloCobranzas
                             neta_pago = Convert.ToDecimal(neta_pago.Value),
                             comision_pago = Convert.ToDecimal(comision_pago.Value),
                             id_tpago = Convert.ToInt64(id_tpago.Value),
-                            pago_por = pago_por.Text,
+                            pago_por = pago_por.Text.ToUpper(),
                             id_liq = Convert.ToInt32(id_liq.Value),
                         };
 
@@ -284,7 +284,7 @@ namespace PresentacionWeb.Sitio.Vista.ModuloCobranzas
                             neta_pago = Convert.ToDecimal(neta_pago.Value),
                             comision_pago = Convert.ToDecimal(comision_pago.Value),
                             id_tpago = Convert.ToInt64(id_tpago.Value),
-                            pago_por = pago_por.Text,
+                            pago_por = pago_por.Text.ToUpper(),
                             id_liq = Convert.ToInt32(id_liq.Value),
 
                         };

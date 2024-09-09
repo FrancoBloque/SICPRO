@@ -53,8 +53,8 @@ namespace PresentacionWeb.Sitio.Vista.ModuloReclamos
                 this.popUpValidacion.ShowOnPageLoad = true;
                 this.btnguardar.Visible = false;
                 this.id_caso.Focus();
-                this.divisa2.Text = this.divisa1.Text;
-                this.divisa3.Text = this.divisa1.Text;
+                this.divisa2.Text = this.divisa1.Text.ToUpper();
+                this.divisa3.Text = this.divisa1.Text.ToUpper();
                 return;
             }
 
@@ -160,19 +160,19 @@ namespace PresentacionWeb.Sitio.Vista.ModuloReclamos
             }
 
             logicaReclamos.upd_histcaso1(
-                                          decimal.Parse(this.id_caso.Text)
-                                         ,decimal.Parse(this.anio_caso.SelectedValue)
+                                          decimal.Parse(this.id_caso.Text.ToUpper())
+                                         , decimal.Parse(this.anio_caso.SelectedValue)
                                         );
             logicaReclamos.ins_histcaso(
-                                        decimal.Parse(this.id_caso.Text)
+                                        decimal.Parse(this.id_caso.Text.ToUpper())
                                         , decimal.Parse(this.anio_caso.SelectedValue)
                                         , int.Parse(this.id_sucur.Value)
                                         , double.Parse(this.id_estca.SelectedValue)
-                                        , this.obs_histcaso.Text
+                                        , this.obs_histcaso.Text.ToUpper()
                                         );
             this.anio_recibo.Value = string.IsNullOrEmpty(this.anio_recibo.Value) ? "0" : this.anio_recibo.Value;
             logicaReclamos.upd_recaso(
-                                      decimal.Parse(this.id_caso.Text)
+                                      decimal.Parse(this.id_caso.Text.ToUpper())
                                       , decimal.Parse(this.anio_caso.SelectedValue)
                                       , this.recibo.Text
                                       , Convert.ToDecimal(this.pago_caso.Value)
@@ -187,7 +187,7 @@ namespace PresentacionWeb.Sitio.Vista.ModuloReclamos
 
             if (this.recibo.Text != "")
             {
-                logicaReclamos.ActuaReciboR(long.Parse(this.recibo.Text), decimal.Parse(this.anio_recibo.Value));
+                logicaReclamos.ActuaReciboR(long.Parse(this.recibo.Text.ToUpper()), decimal.Parse(this.anio_recibo.Value));
             }
 
             this.popUpConfirmacion.ShowOnPageLoad = true;

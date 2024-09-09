@@ -53,7 +53,7 @@ namespace PresentacionWeb.Sitio.Vista.ValidacionProduccion
         private void Datos()
         {
             msgboxpanel.Visible = false;
-            if (!vigencia.Checked & (num_poliza.Text == "") & (nomraz.Text == "") & (nomco.Text == "") & (desc_producto.Text == "") & !porvencer.Checked)
+            if (!vigencia.Checked & (num_poliza.Text.ToUpper() == "") & (nomraz.Text.ToUpper() == "") & (nomco.Text.ToUpper() == "") & (desc_producto.Text.ToUpper() == "") & !porvencer.Checked)
             {
                 //msgboxpanel.Visible = true;
                 //MessageBox messageBox = new MessageBox(base.Server.MapPath("../msgbox1.tpl"));
@@ -86,7 +86,7 @@ namespace PresentacionWeb.Sitio.Vista.ValidacionProduccion
                porvencer.Checked = true;
             }
 
-            var dataTable = _objConsumoModCom.VcoObtenerTablaPolizaNRI(item, num_poliza.Text, id_per.Value, id_spvs.Value, id_producto.Value, vigencia.Checked, fc_inivig.Date, fc_finvig.Date, fc_polizavencida.Date, porvencer.Checked);
+            var dataTable = _objConsumoModCom.VcoObtenerTablaPolizaNRI(item, num_poliza.Text.ToUpper(), id_per.Value, id_spvs.Value, id_producto.Value, vigencia.Checked, fc_inivig.Date, fc_finvig.Date, fc_polizavencida.Date, porvencer.Checked);
             Session["lstGridPoliza"] = dataTable;
             gridpoliza.DataSource = dataTable;
             gridpoliza.DataBind();

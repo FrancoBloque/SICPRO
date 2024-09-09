@@ -77,7 +77,7 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
             lblMensajeError.Text = string.Empty;
             try
             {
-                if (string.IsNullOrEmpty(txtDescripcionGrupo.Text))
+                if (string.IsNullOrEmpty(txtDescripcionGrupo.Text.ToUpper()))
                 {
                     lblMensajeError.Text = "Ingrese la descripcion del grupo";
                     return;
@@ -89,7 +89,7 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
                 {
                     //nuevo
                     var objGrupo = new pr_grupo();
-                    objGrupo.desc_grupo = txtDescripcionGrupo.Text;
+                    objGrupo.desc_grupo = txtDescripcionGrupo.Text.ToUpper();
                     var response = _objConsumoRegistroProd.InsertarGrupo(objGrupo);
 
                     if (response != null)
@@ -108,7 +108,7 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
                     //actualizar
                     var objGrupo = new pr_grupo();
                     objGrupo.id_gru = idGrupo;
-                    objGrupo.desc_grupo = txtDescripcionGrupo.Text;
+                    objGrupo.desc_grupo = txtDescripcionGrupo.Text.ToUpper();
                     var response = _objConsumoRegistroProd.ModificarGrupo(objGrupo);
 
                     if (response != null)

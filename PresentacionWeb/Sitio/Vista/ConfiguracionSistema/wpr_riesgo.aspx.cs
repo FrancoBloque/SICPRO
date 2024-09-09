@@ -54,7 +54,7 @@ namespace PresentacionWeb.Sitio.Vista.ConfiguracionSistema
                 }
                 else
                 {
-                    logicaConfiguracion.InsertarRiesgo(cod_mod.Text, cod_ram.Text, cod_pol.Text, desc_riesgo.Text.ToUpper(), cobertura.SelectedValue);
+                    logicaConfiguracion.InsertarRiesgo(cod_mod.Text.ToUpper(), cod_ram.Text.ToUpper(), cod_pol.Text.ToUpper(), desc_riesgo.Text.ToUpper(), cobertura.SelectedValue);
                     this.lblmensaje.Text = "Nuevo riesgo insertado";
                 }
             }

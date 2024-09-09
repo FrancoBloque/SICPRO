@@ -402,7 +402,7 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
                 //    var numeroCuotas = Convert.ToDouble(txtNumCuotas.Text);
 
                 var objPoliza = new pr_poliza();
-                objPoliza.num_poliza = txtNroPoliza.Text;
+                objPoliza.num_poliza = txtNroPoliza.Text.ToUpper();
                 objPoliza.id_producto = Convert.ToInt64(cmbProducto.SelectedItem.Value);
                 objPoliza.id_perclie = id_per.Value;//Convert.ToString(cmbAsegurado.SelectedItem.Value);
                 
@@ -434,9 +434,9 @@ namespace PresentacionWeb.Sitio.Vista.RegistroProduccion
                 prPolmov.estado = "PRODUCCION"; //this.estado,
                 prPolmov.id_dir =string.IsNullOrEmpty(id_direccion.Value)? 0 : Convert.ToInt64(id_direccion.Value);// Convert.ToInt64(cmbDireccion.SelectedItem.Value);
                 prPolmov.fc_recepcion = fc_recepcion.Date;
-                prPolmov.mat_aseg = txtMatAseg.Text;
+                prPolmov.mat_aseg = txtMatAseg.Text.ToUpper();
                 prPolmov.fc_reg = DateTime.Now;
-                prPolmov.no_liquida = txtNroLiquidacion.Text;
+                prPolmov.no_liquida = txtNroLiquidacion.Text.ToUpper();
                 prPolmov.num_cuota = Convert.ToDouble(txtNumCuotas.Text);
                 prPolmov.tipo_cuota = Convert.ToBoolean(tipo_cuota.SelectedItem.Value);
                 //id_mom = this.id_mom
